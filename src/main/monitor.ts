@@ -26,7 +26,7 @@ export class Monitor {
   setConfig(config: AppConfig) {
     this.config = config;
     if (this.state.isRunning) {
-      this.stop('Configuracao atualizada. Clique em iniciar para aplicar.');
+      this.stop('Configuração atualizada. Clique em iniciar para aplicar.');
     }
   }
 

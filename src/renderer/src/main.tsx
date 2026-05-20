@@ -42,11 +42,11 @@ function App() {
   async function saveConfig() {
     const result = await window.apiFiles.saveConfig(config);
     if (!result.ok) {
-      setMessage(result.error ?? 'Nao foi possivel salvar.');
+      setMessage(result.error ?? 'Não foi possível salvar.');
       return;
     }
     if (result.config) setConfig(result.config);
-    setMessage('Configuracao salva.');
+    setMessage('Configuração salva.');
   }
 
   async function chooseFolder() {
@@ -64,7 +64,7 @@ function App() {
 
     const result = await window.apiFiles.startMonitor(config);
     if (!result.ok) {
-      setMessage(result.error ?? 'Nao foi possivel iniciar.');
+      setMessage(result.error ?? 'Não foi possível iniciar.');
       return;
     }
     if (result.state) setMonitor(result.state);
@@ -90,7 +90,7 @@ function App() {
       <section className="layout">
         <form className="panel config-panel" onSubmit={(event) => event.preventDefault()}>
           <div className="panel-header">
-            <h2>Configuracao</h2>
+            <h2>Configuração</h2>
             <p>Ao abrir o app, o monitor inicia automaticamente se estes dados estiverem completos.</p>
           </div>
 
@@ -106,7 +106,7 @@ function App() {
 
           <div className="field-row">
             <label>
-              Usuario
+              Usuário
               <input value={config.username} onChange={(event) => updateConfig('username', event.target.value)} />
             </label>
             <label>
@@ -163,7 +163,7 @@ function App() {
           {monitor.lastError && <div className="error-box">{monitor.lastError}</div>}
 
           <div className="history-header">
-            <h3>Ultimos arquivos</h3>
+            <h3>Últimos arquivos</h3>
             <span>{monitor.history.length}/10</span>
           </div>
 
@@ -174,7 +174,7 @@ function App() {
               <span>Printer</span>
             </div>
             {monitor.history.length === 0 ? (
-              <div className="empty-state">Nenhum arquivo recebido nesta sessao.</div>
+              <div className="empty-state">Nenhum arquivo recebido nesta sessão.</div>
             ) : (
               monitor.history.map((item) => (
                 <div className="history-row" key={`${item.id}-${item.receivedAt}`}>
@@ -189,7 +189,7 @@ function App() {
       </section>
 
       <footer className="app-footer">
-        Software exclusivo Gobi software. Uso autorizado somente mediante contratacao paga.
+        Software exclusivo Gobi software. Uso autorizado somente mediante contratação paga.
       </footer>
     </main>
   );

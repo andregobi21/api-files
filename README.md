@@ -4,12 +4,12 @@ Aplicativo desktop para consultar um endpoint REST, baixar arquivos retornados p
 
 ## Funcionalidades
 
-- Interface para configurar URL do servidor, usuario, senha, intervalo e pasta de destino.
+- Interface para configurar URL do servidor, usuário, senha, intervalo e pasta de destino.
 - Basic Auth no endpoint de consulta.
 - Download pela URL retornada pela API, sem reenviar Basic Auth.
-- Polling automatico ao abrir o app quando a configuracao salva estiver valida.
-- Botao para iniciar/parar o monitoramento.
-- Historico dos ultimos 10 arquivos recebidos na sessao atual.
+- Polling automático ao abrir o app quando a configuração salva estiver válida.
+- Botão para iniciar/parar o monitoramento.
+- Histórico dos últimos 10 arquivos recebidos na sessão atual.
 - Build para macOS arm64 e Windows x64.
 
 ## Retorno esperado da API
@@ -29,7 +29,7 @@ Qualquer status diferente de `200` e tratado como ausencia de arquivo pendente.
 
 ## Destino dos arquivos
 
-Os arquivos sao salvos em:
+Os arquivos são salvos em:
 
 ```text
 {pasta_base}/printer{printer}/{nome}
@@ -38,7 +38,7 @@ Os arquivos sao salvos em:
 Exemplo:
 
 ```text
-/Users/usuario/Downloads/printer1/arquivo.pdf
+/Users/usuário/Downloads/printer1/arquivo.pdf
 ```
 
 ## Desenvolvimento
@@ -48,7 +48,7 @@ npm install
 npm run dev
 ```
 
-## Validacao
+## Validação
 
 ```bash
 npm run typecheck
@@ -69,4 +69,4 @@ Windows x64:
 npm run dist:win
 ```
 
-Os artefatos sao gerados na pasta `release/`.
+Os artefatos são gerados na pasta `release/`.

@@ -1,6 +1,6 @@
 {
   "name": "api-files",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Desktop app to poll an API and download files by printer.",
   "main": "dist/main/main.js",
   "author": "Gobi Sistemas",

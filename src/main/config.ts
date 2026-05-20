@@ -33,10 +33,10 @@ export function validateConfig(config: AppConfig): string | null {
   try {
     new URL(config.apiUrl);
   } catch {
-    return 'Informe uma URL valida.';
+    return 'Informe uma URL válida.';
   }
 
-  if (!config.username) return 'Informe o usuario da API.';
+  if (!config.username) return 'Informe o usuário da API.';
   if (!config.password) return 'Informe a senha da API.';
   if (!config.downloadFolder) return 'Escolha a pasta de destino.';
   if (!Number.isFinite(config.intervalSeconds) || config.intervalSeconds < 1) {
