@@ -15,7 +15,7 @@ function createWindow() {
     height: 720,
     minWidth: 900,
     minHeight: 620,
-    title: 'API Files',
+    title: 'Sincronizador de arquivos',
     webPreferences: {
       preload: path.join(__dirname, '../preload/preload.js'),
       contextIsolation: true,

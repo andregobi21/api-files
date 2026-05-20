@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import type { AppConfig, MonitorState } from '../../shared';
+import logoIcon from './assets/logo-icone.png';
 import './styles.css';
 
 const emptyConfig: AppConfig = {
@@ -72,9 +73,13 @@ function App() {
   return (
     <main className="app-shell">
       <section className="toolbar">
-        <div>
-          <h1>API Files</h1>
-          <p>Monitore o endpoint, baixe arquivos autenticados e organize por impressora.</p>
+        <div className="brand-lockup">
+          <img src={logoIcon} alt="Gobi software" className="brand-logo" />
+          <div>
+            <div className="company-name">Gobi software</div>
+            <h1>Sincronizador de arquivos</h1>
+            <p>Monitore o endpoint, baixe arquivos autenticados e organize por impressora.</p>
+          </div>
         </div>
         <div className={`status-pill ${monitor.isRunning ? 'running' : 'stopped'}`}>
           <span />
@@ -182,6 +187,10 @@ function App() {
           </div>
         </section>
       </section>
+
+      <footer className="app-footer">
+        Software exclusivo Gobi software. Uso autorizado somente mediante contratacao paga.
+      </footer>
     </main>
   );
 }

@@ -1,4 +1,4 @@
-# API Files
+# Sincronizador de arquivos
 
 Aplicativo desktop para consultar um endpoint REST, baixar arquivos retornados pela API e salvar em uma pasta local por impressora.
 
