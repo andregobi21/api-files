@@ -6,7 +6,6 @@
   "author": "Gobi Sistemas",
   "license": "UNLICENSED",
   "private": true,
-  "type": "module",
   "scripts": {
     "dev": "concurrently -k \"npm:dev:renderer\" \"npm:dev:electron\"",
     "dev:renderer": "vite --host 127.0.0.1",

@@ -1,11 +1,8 @@
 import { app, BrowserWindow, dialog, ipcMain, type OpenDialogOptions } from 'electron';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
 import type { AppConfig } from '../shared.js';
 import { loadConfig, normalizeConfig, saveConfig, validateConfig } from './config.js';
 import { Monitor } from './monitor.js';
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 let mainWindow: BrowserWindow | null = null;
 let currentConfig: AppConfig | null = null;
